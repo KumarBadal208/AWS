@@ -1,0 +1,2 @@
+kumar,CS123,1,Folklore,C Programming,Data communication
+badal,EC789,4,Economics,Electronic Mechanism,Digital Communication

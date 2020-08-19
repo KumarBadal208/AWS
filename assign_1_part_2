@@ -1,0 +1,29 @@
+def wordCount(filename):
+	data = filename.read()
+	words = data.split()
+	print(len(words))
+	return words
+
+def topTenWords(wordCountDict):
+	stop_words = ['as','the','how','a','an','is','in','i','the','of','and']
+	i=0
+	for x in wordCountDict:
+		if x in stop_words:
+			pass
+		else:
+			i+=1
+			print(x)
+			if i==10:
+				break
+ 
+
+
+
+def Main():
+	filename= open("sample.txt","r")
+	wordCountDict = wordCount(filename)
+	topTenWords(wordCountDict)
+	filename.close()
+if __name__ == "__main__":
+    Main()
+

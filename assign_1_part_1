@@ -1,0 +1,175 @@
+print("\t\t--------REGISTRATION PROCESS---------")
+print("Want to register for new sem??----> type yes or no")
+value = input()
+ls1 = []
+ls2 = []
+CS231="Algorith and Data Structure"
+CS234="Compulcomputer architecture"
+CS406="Graphics Designing"
+CS351="Cloud computing"
+CS301="Machine Learning"
+CS401="Cyber security"
+CS101="C Programming"
+CS103="Data communication"
+EC201="Basic Electronics"
+EC202="Electronic Communication"
+EC401="Electronic Mechanism"
+EC402="Digital Communication"
+EC301="Analog Integrated Circuits"
+EC302="Control Systems"
+EC101="Digital Design"
+EC102="Electrical Circuit Analysis"
+HS708="Economics"
+HS709="Political Science"
+HS707="Hind swaraj"
+HS706="Folklore"
+
+
+while value=="yes":
+
+	print("\t\t---->Registration page<----")
+	name = input("NAME : ")
+	rn = input("ROLL NUMBER : ")
+	branch = input("BRANCH(CSE/ECE) : ")
+	print("choose the sem : 1,2,3,4,5,6,7,8")
+	sem = input("SEMESTER : ")
+	if rn[0]=='C':
+		print("Please select your respective course")
+		print("You should must choose 1 hs subject and two core subject")
+		print("1.CS231\t2.CS234\t3.CS406\t4.CS351")
+		print("5.CS301\t6.CS401\t7.CS101\t8.CS103")
+		cs1 = input("CS subject 1 : ")
+		if cs1=='1':
+			cs1 = CS231
+		if cs1=='2':
+			cs1 = CS234
+		if cs1=='3':
+			cs1 = CS406
+		if cs1=='4':
+			cs1 = CS351
+		if cs1=='5':
+			cs1 = CS301
+		if cs1=='6':
+			cs1 = CS401
+		if cs1=='7':
+			cs1 = CS101
+		if cs1=='8':
+			cs1 = CS103
+		cs2 = input("CS subject 2 : ")
+		if cs2=='1':
+			cs2 = CS231
+		if cs2=='2':
+			cs2 = CS234
+		if cs2=='3':
+			cs2 = CS406
+		if cs2=='4':
+			cs2 = CS351
+		if cs2=='5':
+			cs2 = CS301
+		if cs2=='6':
+			cs2 = CS401
+		if cs2=='7':
+			cs2 = CS101
+		if cs2=='8':
+			cs2 = CS103
+		print("1.HS706\t2.HS707\t3.HS708\t4.HS709")
+		hs = input("HS subject : ")
+		if hs=='1':
+			hs = HS706
+		if hs=='2':
+			hs = HS707
+		if hs=='3':
+			hs = HS708
+		if hs=='4':
+			hs = HS709
+		ls1.append([name,rn,sem])
+		ls2.append([rn,hs,cs1,cs2])
+		print("\t\t----REGISTRATION COMPLETE")
+		print(ls1)
+		print(ls2)
+		with open("student_course _information.txt","w") as file:
+			file.write(name)
+			file.write(",")
+			file.write(rn)
+			file.write(",")
+			file.write(sem)
+			file.write(",")
+			file.write(hs)
+			file.write(",")
+			file.write(cs1)
+			file.write(",")
+			file.write(cs2)
+			file.write("\n")
+
+	if rn[0]=='E':
+		print("Please select your respective course")
+		print("You should must choose 1 hs subject and two core subject")
+		print("1.EC101\t2.EC102\t3.EC201\t4.EC202")
+		print("5.EC301\t6.EC302\t7.EC401\t8.EC402")
+		es1 = input("Choose subject 1 : ")
+		if es1=="1":
+			es1 = EC101
+		if es1=='2':
+			es1 = EC102
+		if es1=='3':
+			es1 = EC201
+		if es1=='4':
+			es1 = EC202
+		if es1=='5':
+			es1 = EC301
+		if es1=='6':
+			es1 = EC302
+		if es1=='7':
+			es1 = EC401
+		if es1=='8':
+			es1 = EC402
+		es2 = input("CS subject 2 : ")
+		if es2=='1':
+			es2 = EC101
+		if es2=='2':
+			es2 = EC102
+		if es2=='3':
+			es2 = EC201
+		if es2=='4':
+			es2 = EC202
+		if es2=='5':
+			es2 = EC301
+		if es2=='6':
+			es2 = EC302
+		if es2=='7':
+			es2 = EC401
+		if es2=='8':
+			es2 = EC402
+		print("1.HS706\t2.HS707\t3.HS708\t4.HS709")
+		hs = input("HS subject : ")
+		if hs=='1':
+			hs = HS706
+		if hs=='2':
+			hs = HS707
+		if hs=='3':
+			hs = HS708
+		if hs=='4':
+			hs = HS709
+		ls1.append([name,rn,sem])
+		ls2.append([rn,hs,es1,es2])
+		with open("student_course _information.txt","a+") as file:
+			file.write(name)
+			file.write(",")
+			file.write(rn)
+			file.write(",")
+			file.write(sem)
+			file.write(",")
+			file.write(hs)
+			file.write(",")
+			file.write(es1)
+			file.write(",")
+			file.write(es2)
+			file.write("\n")
+		print("\t\t----REGISTRATION COMPLETE")
+		print(ls1)
+		print(ls2)
+	print("Want to register for new sem??----> type yes or no")
+	value = input()
+
+if value!="yes":
+	print("Thank you")
